@@ -9,7 +9,7 @@ const CustomerViewPage = () =>
   import('@/modules/customer/components/customer-view-page.vue');
 const CustomerImporterPage = () =>
   import('@/modules/customer/components/customer-importer-page.vue');
-
+  
 export default [
   {
     name: '',

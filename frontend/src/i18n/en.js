@@ -440,6 +440,9 @@ const en = {
       customer: 'Customer',
     },
   },
+  membership: {
+    menu: 'Membership',
+  },
   errors: {
     backToHome: 'Back to home',
     403: `Sorry, you don't have access to this page`,

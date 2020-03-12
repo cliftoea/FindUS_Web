@@ -35,7 +35,7 @@ class Permissions {
           roles.owner,
           roles.iamSecurityReviewer,
           roles.editor,
-          roles.viewer,
+          
         ],
       },
       iamUserAutocomplete: {
@@ -43,7 +43,7 @@ class Permissions {
         allowedRoles: [
           roles.owner,
           roles.editor,
-          roles.viewer,
+          
 
           roles.orderEditor,
           roles.orderViewer,
@@ -51,7 +51,7 @@ class Permissions {
       },
       auditLogRead: {
         id: 'auditLogRead',
-        allowedRoles: [roles.owner, roles.auditLogViewer, roles.viewer],
+        allowedRoles: [roles.owner, roles.auditLogViewer],
       },
       settingsEdit: {
         id: 'settingsEdit',
@@ -101,7 +101,7 @@ class Permissions {
         allowedRoles: [
           roles.owner,
           roles.editor,
-          roles.viewer,
+          
           roles.entityEditor,
           roles.customerEditor,
           roles.customerViewer,
@@ -112,7 +112,7 @@ class Permissions {
         allowedRoles: [
           roles.owner,
           roles.editor,
-          roles.viewer,
+          
           roles.entityEditor,
           roles.customerEditor,
           roles.customerViewer,
@@ -165,7 +165,7 @@ class Permissions {
         allowedRoles: [
           roles.owner,
           roles.editor,
-          roles.viewer,
+          
           roles.entityEditor,
           roles.productEditor,
           roles.productViewer,
@@ -176,7 +176,7 @@ class Permissions {
         allowedRoles: [
           roles.owner,
           roles.editor,
-          roles.viewer,
+          
           roles.entityEditor,
           roles.productEditor,
           roles.productViewer,
@@ -229,7 +229,7 @@ class Permissions {
         allowedRoles: [
           roles.owner,
           roles.editor,
-          roles.viewer,
+          
           roles.entityEditor,
           roles.orderEditor,
           roles.orderViewer,
@@ -240,7 +240,7 @@ class Permissions {
         allowedRoles: [
           roles.owner,
           roles.editor,
-          roles.viewer,
+          
           roles.entityEditor,
           roles.orderEditor,
           roles.orderViewer,

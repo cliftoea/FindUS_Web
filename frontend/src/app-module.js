@@ -6,6 +6,7 @@ import shared from '@/shared/shared-module';
 import auth from '@/modules/auth/auth-module';
 import layout from '@/modules/layout/layout-module';
 import home from '@/modules/home/home-module';
+import membership from '@/modules/membership/membership-module';
 import iam from '@/modules/iam/iam-module';
 import settings from '@/modules/settings/settings-module';
 import auditLog from '@/modules/audit-log/audit-log-module';
@@ -24,6 +25,7 @@ const modules = {
   customer,
   product,
   order,
+  membership,
 };
 
 // start - boilerplate code

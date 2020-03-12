@@ -23,6 +23,13 @@
         </span>
       </el-menu-item>
 
+      <el-menu-item :class="classFor('/membership', true)" :route="{ path: '/membership' }" index="/membership">
+        <i class="el-icon-fa-chevron-right"></i>
+        <span slot="title">
+          <app-i18n code="membership.menu"></app-i18n>
+        </span>
+      </el-menu-item>
+
       <el-menu-item
         :class="classFor('/iam')"
         :route="{ path: '/iam' }"
