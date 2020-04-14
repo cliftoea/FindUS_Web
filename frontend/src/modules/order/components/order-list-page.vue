@@ -13,7 +13,7 @@
       <h1 class="app-content-title">
         <app-i18n code="entities.order.list.title"></app-i18n>
       </h1>
-      <form onsubmit="sendMail()" id="mailform">
+      <form onsubmit="emailSubmit()" id="mailform">
         <input type="text" id="name_mail" name="name_mail" v-model="currentUserNameOrEmailPrefix" hidden>
         <div>
           <label for="subject_mail">Subject: </label>
@@ -58,8 +58,27 @@
     </div>
   </div>
 </template>
-
+<script src="https://www.gstatic.com/firebasejs/7.14.0/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-functions.js"></script>
 <script>
+const firebase = require("firebase");
+// Required for side-effects
+require("firebase/functions");
+
+function emailSubmit(){
+  console.log("here");
+    const name = document.getElementById("name_mail").value;
+    const subject = document.getElementById("subject_mail").value;
+    const template = document.getElementById("templates_mail").value;
+    const body = document.getElementById("body_mail").value;
+    const date = document.getElementById("date_mail").value;   
+    const array = [name, subject, template, body, date];
+    const sendMail = firebase.functions().httpsCallable('sendMail');
+    sendMail(array).then(function(result){
+      console.log(result);
+    }); 
+  };
+
 import OrderListFilter from '@/modules/order/components/order-list-filter.vue';
 import OrderListTable from '@/modules/order/components/order-list-table.vue';
 import OrderListToolbar from '@/modules/order/components/order-list-toolbar.vue';

@@ -3,7 +3,7 @@ Feature('Facebook Tests');
 Scenario('Facebook Post Reactions', (I) => {
     I.amOnPage('https://www.facebook.com');
     I.fillField('#email', 'ethanaclifton1997@gmail.com');
-    I.fillField('#pass', secret('Burdsall$97'));
+    I.fillField('#pass', secret(''));
     I.click('Log In');
     I.amOnPage('https://www.facebook.com/starlesscincinnati');
     pause();
