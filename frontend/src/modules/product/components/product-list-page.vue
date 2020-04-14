@@ -14,9 +14,27 @@
         <app-i18n code="entities.product.list.title"></app-i18n>
       </h1>
 
-      <app-product-list-toolbar></app-product-list-toolbar>
-      <app-product-list-filter></app-product-list-filter>
-      <app-product-list-table></app-product-list-table>
+      <div>
+        <h1>Automated Posting</h1>
+        <p>Submit your content below, we will post it at the peak performance time</p><br>
+        <form>
+          <div>
+            <label for="social_post">Social Account: </label>
+            <select id="social_post">
+            <option value="fb">Facebook</option>
+            <option value="t">Twitter</option>
+            </select><br><br>
+            <label for="body_post">Post content: </label><br>
+            <textarea id="w3mission" rows="4" cols="50">
+            </textarea>
+          </div><br>
+          <div>
+            <label for="img_post">Select image: </label>
+            <input type="file" id="img_post" name="img" accept="image/*">
+          </div><br>
+          <input type="submit">
+        </form>
+      </div>
     </div>
   </div>
 </template>

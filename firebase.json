@@ -14,7 +14,10 @@
     ]
   },
   "functions": {
-    "source": "backend"
+    "source": "backend",
+    "predeploy": [
+      "npm --prefix \"$RESOURCE_DIR\" run lint"
+    ]
   },
   "storage": {
     "rules": "storage.rules"

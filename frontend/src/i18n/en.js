@@ -83,12 +83,12 @@ const en = {
 
     product: {
       name: 'product',
-      label: 'Products',
-      menu: 'Products',
+      label: 'Posting',
+      menu: 'Posting',
       exporterFileName: 'product_export',
       list: {
-        menu: 'Products',
-        title: 'Products',
+        menu: 'Posting',
+        title: 'Posting',
       },
       create: {
         success: 'Product saved successfully',
@@ -135,12 +135,12 @@ const en = {
 
     order: {
       name: 'order',
-      label: 'Orders',
-      menu: 'Orders',
+      label: 'Mail',
+      menu: 'Mail',
       exporterFileName: 'order_export',
       list: {
-        menu: 'Orders',
-        title: 'Orders',
+        menu: 'Mail',
+        title: 'Mail',
       },
       create: {
         success: 'Order saved successfully',
@@ -442,6 +442,9 @@ const en = {
   },
   membership: {
     menu: 'Membership',
+  },
+  membership2: {
+    menu: 'Membership2',
   },
   errors: {
     backToHome: 'Back to home',

@@ -1,79 +1,23 @@
 <template>
   <div>
-    <h1>Welcome to FindUS!</h1>
-    <p>This is the central hub for all data related to your social media pages.<br>
-    We are currently growing and expanding but you can find useful information below!</p>
-    <h2>Facebook Statistics</h2>
+    <h2>Upgrade your membership</h2>
+    <h1>You are currently a <span style="color:darkgreen;">tier 1</span> user</h1>
     <el-row :gutter="16">
       <el-col :lg="8" :md="12" :sm="24">
-        <app-home-chart :config="bar"/>
-      </el-col>
-      <el-col :lg="8" :md="12" :sm="24">
-        <app-home-chart :config="bar6"/>
-      </el-col>
-      <el-col :lg="8" :md="12" :sm="24">
-        <app-home-chart :config="bar7"/>
+        <p style='margin-left: 1em;margin-right: 1em;'>We can get further information on your reach including post views, time trends, and messenger requests</p>
       </el-col>
       <br>
-      <h1>Your Facebook Tips:</h1>
       <el-col :lg="8" :md="12" :sm="24">
-        <p>Your post reactions have decreased over time. Remember, the more posts you have that ask nothing of your fans, the more likely they will interact</p>
-      </el-col>
-      <el-col :lg="8" :md="12" :sm="24">
-        <p>Your videos are performing better than other posts, keep it up!</p>
-      </el-col>
-      <el-col :lg="8" :md="12" :sm="24">
-        <p>You hit 2,000 likes recently, consistent content helps keep that number rising.</p>
+        <button style="margin-left: auto;margin-right: auto;width: 100%;background-color: #8e58da;margin-top: 1em;color: white;border: none;height: 2em;border-radius: 1em;">UPGRADE</button>
       </el-col>
       <br>
-      <h2>Twitter Statistics</h2>
       <el-col :lg="8" :md="12" :sm="24">
-        <app-home-chart :config="bar2"/>
+        <p style='margin-left: 1em;margin-right: 1em;'>You will be able to utilize all of our mail features</p>
       </el-col>
-      <el-col :lg="8" :md="12" :sm="24">
-        <app-home-chart :config="bar4"/>
-      </el-col>
-      <el-col :lg="8" :md="12" :sm="24">
-        <app-home-chart :config="bar5"/>
-      </el-col>
-      <br>
-      <h1>Your Twitter Tips:</h1>
-      <el-col :lg="8" :md="12" :sm="24">
-        <p>You haven't tweeted in awhile, reach out to your fans soon!</p>
-      </el-col>
-      <el-col :lg="8" :md="12" :sm="24">
-        <p></p>
-      </el-col>
-      <el-col :lg="8" :md="12" :sm="24">
-        <p></p>
-      </el-col>
-      <br>
-      <!--<el-col :lg="8" :md="12" :sm="24">
-        <app-home-chart :config="mix2"/>
-      </el-col>
-      <el-col :lg="8" :md="12" :sm="24">
-        <app-home-chart :config="doughnut"/>
-      </el-col>
-      <el-col :md="12" :sm="24">
-        <app-home-chart :config="mix1"/>
-      </el-col>
-      <el-col :md="12" :sm="24">
-        <app-home-chart :config="radar"/>
-      </el-col>
-      <el-col :lg="8" :md="12" :sm="24">
-        <app-home-chart :config="horizontalBar"/>
-      </el-col>
-      <el-col :lg="8" :md="12" :sm="24">
-        <app-home-chart :config="polar"/>
-      </el-col>
-      <el-col :lg="8" :md="12" :sm="24">
-        <app-home-chart :config="line"/>
-      </el-col>-->
+
     </el-row>
 
-    <p class="home-bottom-message">
-      <app-i18n code="home.message"></app-i18n>
-    </p>
+    
   </div>
 </template>
 
@@ -83,7 +27,7 @@ import HomeChart from '@/modules/home/components/home-chart.vue';
 import { mapActions, mapGetters } from 'vuex';
 
 export default {
-  name: 'app-home-page',
+  name: 'app-membership2-page',
 
   components: {
     [HomeChart.name]: HomeChart,
@@ -109,95 +53,13 @@ export default {
           ],
           datasets: [
             {
-              label: i18n("Post Likes (Facebook)"),
+              label: i18n("Post Interaction (Facebook)"),
               backgroundColor: "rgba(45, 109, 247,0.2)",
               borderColor: "rgba(45, 109, 247,1)",
               borderWidth: 1,
               hoverBackgroundColor: "rgba(45, 109, 247,0.4)",
               hoverBorderColor: "rgba(45, 109, 247,1)",
-              data: [15, 8, 15, 15, 10]
-            }
-          ]
-        },
-        
-        options: {
-          legend: {
-            display: true
-          },
-          scales: {
-            xAxes: [
-              {
-                display: false
-              }
-            ],
-            yAxes: [
-              {
-                display: true
-              }
-            ]
-          }
-        }
-      },
-      bar7: {
-        type: "bar",
-        data: {
-          labels: [
-            `${i18n("home.charts.day")} 1`,
-            `${i18n("home.charts.day")} 2`,
-            `${i18n("home.charts.day")} 3`,
-            `${i18n("home.charts.day")} 4`,
-            `${i18n("home.charts.day")} 5`
-          ],
-          datasets: [
-            {
-              label: i18n("Post Shares (Facebook)"),
-              backgroundColor: "rgba(45, 109, 247,0.2)",
-              borderColor: "rgba(45, 109, 247,1)",
-              borderWidth: 1,
-              hoverBackgroundColor: "rgba(45, 109, 247,0.4)",
-              hoverBorderColor: "rgba(45, 109, 247,1)",
-              data: [1, 4, 2, 15, 17]
-            }
-          ]
-        },
-        
-        options: {
-          legend: {
-            display: true
-          },
-          scales: {
-            xAxes: [
-              {
-                display: false
-              }
-            ],
-            yAxes: [
-              {
-                display: true
-              }
-            ]
-          }
-        }
-      },
-      bar6: {
-        type: "bar",
-        data: {
-          labels: [
-            `${i18n("home.charts.day")} 1`,
-            `${i18n("home.charts.day")} 2`,
-            `${i18n("home.charts.day")} 3`,
-            `${i18n("home.charts.day")} 4`,
-            `${i18n("home.charts.day")} 5`
-          ],
-          datasets: [
-            {
-              label: i18n("Page Followers (Facebook)"),
-              backgroundColor: "rgba(45, 109, 247,0.2)",
-              borderColor: "rgba(45, 109, 247,1)",
-              borderWidth: 1,
-              hoverBackgroundColor: "rgba(45, 109, 247,0.4)",
-              hoverBorderColor: "rgba(45, 109, 247,1)",
-              data: [0, 1, 0, 0, 3]
+              data: [65, 59, 80, 81, 82]
             }
           ]
         },
@@ -232,7 +94,7 @@ export default {
           ],
           datasets: [
             {
-              label: i18n("Interaction (LinkedIn) Coming Soon"),
+              label: i18n("Post Interaction (LinkedIn) Coming Soon"),
               backgroundColor: "rgba(14, 120, 0,0.2)",
               borderColor: "rgba(14, 120, 0,1)",
               borderWidth: 1,
@@ -273,95 +135,13 @@ export default {
           ],
           datasets: [
             {
-              label: i18n("Post Likes (Twitter)"),
+              label: i18n("Post Interaction (Twitter)"),
               backgroundColor: "rgba(87, 206, 242,0.2)",
               borderColor: "rgba(87, 206, 242,1)",
               borderWidth: 1,
               hoverBackgroundColor: "rgba(87, 206, 242,0.4)",
               hoverBorderColor: "rgba(87, 206, 242,1)",
-              data: [0, 2, 1, 3, 1]
-            }
-          ]
-        },
-        
-        options: {
-          legend: {
-            display: true
-          },
-          scales: {
-            xAxes: [
-              {
-                display: false
-              }
-            ],
-            yAxes: [
-              {
-                display: true
-              }
-            ]
-          }
-        }
-      },
-      bar4: {
-        type: "bar",
-        data: {
-          labels: [
-            `${i18n("home.charts.day")} 1`,
-            `${i18n("home.charts.day")} 2`,
-            `${i18n("home.charts.day")} 3`,
-            `${i18n("home.charts.day")} 4`,
-            `${i18n("home.charts.day")} 5`
-          ],
-          datasets: [
-            {
-              label: i18n("Retweets (Twitter)"),
-              backgroundColor: "rgba(87, 206, 242,0.2)",
-              borderColor: "rgba(87, 206, 242,1)",
-              borderWidth: 1,
-              hoverBackgroundColor: "rgba(87, 206, 242,0.4)",
-              hoverBorderColor: "rgba(87, 206, 242,1)",
-              data: [0, 0, 0, 1, 0]
-            }
-          ]
-        },
-        
-        options: {
-          legend: {
-            display: true
-          },
-          scales: {
-            xAxes: [
-              {
-                display: false
-              }
-            ],
-            yAxes: [
-              {
-                display: true
-              }
-            ]
-          }
-        }
-      },
-      bar5: {
-        type: "bar",
-        data: {
-          labels: [
-            `${i18n("home.charts.day")} 1`,
-            `${i18n("home.charts.day")} 2`,
-            `${i18n("home.charts.day")} 3`,
-            `${i18n("home.charts.day")} 4`,
-            `${i18n("home.charts.day")} 5`
-          ],
-          datasets: [
-            {
-              label: i18n("Followers (Twitter)"),
-              backgroundColor: "rgba(87, 206, 242,0.2)",
-              borderColor: "rgba(87, 206, 242,1)",
-              borderWidth: 1,
-              hoverBackgroundColor: "rgba(87, 206, 242,0.4)",
-              hoverBorderColor: "rgba(87, 206, 242,1)",
-              data: [0, 0, 0, 0, 0]
+              data: [45, 29, 40, 61, 32]
             }
           ]
         },

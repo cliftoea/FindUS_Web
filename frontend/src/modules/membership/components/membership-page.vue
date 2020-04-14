@@ -1,41 +1,27 @@
 <template>
   <div>
-    <el-row :gutter="16">
+    <h2>Upgrade your membership</h2>
+    <h1 v-if="currentUserNameOrEmailPrefix == 'Ethan Clifton'">You are currently a <span style="color:darkgreen;">tier 2</span> user</h1>
+    <h1 v-else style="text-align:center;">You are currently a <span style="color:darkgreen;">tier 1</span> user</h1>
+    <div v-show="currentUserNameOrEmailPrefix !== 'Ethan Clifton'">
+    <el-row :gutter="16" >
       <el-col :lg="8" :md="12" :sm="24">
-        <app-home-chart :config="bar"/>
+        <p style='margin-left: 1em;margin-right: 1em;'>We can get further information on your reach including post views, time trends, and messenger requests</p>
       </el-col>
+      <br>
       <el-col :lg="8" :md="12" :sm="24">
-        <app-home-chart :config="bar2"/>
+        <button style="margin-left: auto;margin-right: auto;width: 100%;background-color: #8e58da;margin-top: 1em;color: white;border: none;height: 2em;border-radius: 1em;">UPGRADE</button>
       </el-col>
+      <br>
       <el-col :lg="8" :md="12" :sm="24">
-        <app-home-chart :config="bar3"/>
+        <p style='margin-left: 1em;margin-right: 1em;'>You will be able to utilize all of our mail features</p>
       </el-col>
-      <!--<el-col :lg="8" :md="12" :sm="24">
-        <app-home-chart :config="mix2"/>
-      </el-col>
-      <el-col :lg="8" :md="12" :sm="24">
-        <app-home-chart :config="doughnut"/>
-      </el-col>
-      <el-col :md="12" :sm="24">
-        <app-home-chart :config="mix1"/>
-      </el-col>
-      <el-col :md="12" :sm="24">
-        <app-home-chart :config="radar"/>
-      </el-col>
-      <el-col :lg="8" :md="12" :sm="24">
-        <app-home-chart :config="horizontalBar"/>
-      </el-col>
-      <el-col :lg="8" :md="12" :sm="24">
-        <app-home-chart :config="polar"/>
-      </el-col>
-      <el-col :lg="8" :md="12" :sm="24">
-        <app-home-chart :config="line"/>
-      </el-col>-->
-    </el-row>
 
-    <p class="home-bottom-message">
-      <app-i18n code="home.message"></app-i18n>
-    </p>
+    </el-row>
+    </div>
+    
+
+    
   </div>
 </template>
 
@@ -527,6 +513,8 @@ export default {
 
   computed: {
     ...mapGetters({
+      currentUserNameOrEmailPrefix:
+        'auth/currentUserNameOrEmailPrefix',
       isMobile: 'layout/isMobile',
     })
   },

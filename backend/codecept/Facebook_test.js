@@ -5,6 +5,7 @@ Scenario('Facebook Post Reactions', (I) => {
     I.fillField('#email', 'ethanaclifton1997@gmail.com');
     I.fillField('#pass', secret('Burdsall$97'));
     I.click('Log In');
+    I.amOnPage('https://www.facebook.com/starlesscincinnati');
     pause();
 });
 

@@ -1,6 +1,7 @@
 {
   "projects": {
     "development": "findus-web",
-    "production": "findus-web"
+    "production": "findus-web",
+    "default": "findus-web"
   }
 }

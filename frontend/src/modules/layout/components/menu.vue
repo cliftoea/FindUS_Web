@@ -29,7 +29,37 @@
           <app-i18n code="membership.menu"></app-i18n>
         </span>
       </el-menu-item>
+      <!--<el-menu-item :class="classFor('/membership2', true)" :route="{ path: '/membership2' }" index="/membership2">
+        <i class="el-icon-fa-chevron-right"></i>
+        <span slot="title">
+          <app-i18n code="membership2.menu"></app-i18n>
+        </span>
+      </el-menu-item>-->
 
+      
+      <el-menu-item
+        :class="classFor('/product')"
+        :route="{ path: '/product' }"
+        index="/product"
+        v-if="hasPermissionToProduct"
+      >
+        <i class="el-icon-fa-chevron-right"></i>
+        <span slot="title">
+          <app-i18n code="entities.product.menu"></app-i18n>
+        </span>
+      </el-menu-item>
+
+      <el-menu-item
+        :class="classFor('/order')"
+        :route="{ path: '/order' }"
+        index="/order"
+        v-if="hasPermissionToOrder"
+      >
+        <i class="el-icon-fa-chevron-right"></i>
+        <span slot="title">
+          <app-i18n code="entities.order.menu"></app-i18n>
+        </span>
+      </el-menu-item>
       <el-menu-item
         :class="classFor('/iam')"
         :route="{ path: '/iam' }"
@@ -41,7 +71,6 @@
           <app-i18n code="iam.menu"></app-i18n>
         </span>
       </el-menu-item>
-
       <el-menu-item
         :class="classFor('/audit-logs')"
         :route="{ path: '/audit-logs' }"
@@ -78,29 +107,7 @@
         </span>
       </el-menu-item>
 
-      <el-menu-item
-        :class="classFor('/product')"
-        :route="{ path: '/product' }"
-        index="/product"
-        v-if="hasPermissionToProduct"
-      >
-        <i class="el-icon-fa-chevron-right"></i>
-        <span slot="title">
-          <app-i18n code="entities.product.menu"></app-i18n>
-        </span>
-      </el-menu-item>
 
-      <el-menu-item
-        :class="classFor('/order')"
-        :route="{ path: '/order' }"
-        index="/order"
-        v-if="hasPermissionToOrder"
-      >
-        <i class="el-icon-fa-chevron-right"></i>
-        <span slot="title">
-          <app-i18n code="entities.order.menu"></app-i18n>
-        </span>
-      </el-menu-item>
     </el-menu>
   </el-aside>
 </template>
