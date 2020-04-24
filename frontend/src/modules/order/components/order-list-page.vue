@@ -17,11 +17,11 @@
         <input type="text" id="name_mail" name="name_mail" v-model="currentUserNameOrEmailPrefix" hidden>
         <div>
           <label for="subject_mail">Subject: </label>
-          <input type="text" id="subject_mail" name="subject_mail">
+          <input type="text" id="subject_mail" name="subject_mail" style="border-radius: 1em;">
         </div><br>
         <div>
           <label for="templates_mail">Choose a template: </label>
-          <select id="templates_mail">
+          <select id="templates_mail" style="border-radius: 1em;">
             <option value="formal">Formal</option>
             <option value="fun">Fun</option>
             <option value="simple">Simple</option>
@@ -48,11 +48,11 @@
         </div><br>
         <div>
           <label for="body_mail">Email content: </label><br>
-          <textarea id="body_mail" rows="4" cols="50">
+          <textarea id="body_mail" rows="5" cols="60" style="border-radius: 1em;">
           </textarea>
         </div><br>
         <label for="date_mail">Date: </label>
-        <input type="text" id="date_mail"><br><br>
+        <input type="text" id="date_mail" style="border-radius: 1em;"><br><br>
         <input type="submit">
         </form>
     </div>

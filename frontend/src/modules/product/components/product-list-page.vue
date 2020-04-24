@@ -20,12 +20,12 @@
         <form>
           <div>
             <label for="social_post">Social Account: </label>
-            <select id="social_post">
+            <select id="social_post" style="border-radius: 1em;">
             <option value="fb">Facebook</option>
             <option value="t">Twitter</option>
             </select><br><br>
             <label for="body_post">Post content: </label><br>
-            <textarea id="w3mission" rows="4" cols="50">
+            <textarea id="body_post" rows="4" cols="50" style="border-radius: 1em;">
             </textarea>
           </div><br>
           <div>

@@ -10,7 +10,7 @@
       </el-col>
       <br>
       <el-col :lg="8" :md="12" :sm="24">
-        <button style="margin-left: auto;margin-right: auto;width: 100%;background-color: #8e58da;margin-top: 1em;color: white;border: none;height: 2em;border-radius: 1em;">UPGRADE</button>
+        <button v-on:click="isHidden = !isHidden" style="margin-left: auto;margin-right: auto;width: 100%;background-color: #8e58da;margin-top: 1em;color: white;border: none;height: 2em;border-radius: 1em;">UPGRADE</button>
       </el-col>
       <br>
       <el-col :lg="8" :md="12" :sm="24">
@@ -18,6 +18,11 @@
       </el-col>
 
     </el-row>
+    <div v-if="isHidden" style="text-align:center;">
+      <label for="upfield">Email Address: </label>
+      <input id="upfield" style="border-radius: 1em;"><br><br>
+      <input type="submit">
+    </div>
     </div>
     
 
@@ -45,6 +50,7 @@ export default {
 
   data() {
     return {
+      isHidden: false,
       bar: {
         type: "bar",
         data: {
