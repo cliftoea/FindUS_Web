@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@codeceptjs/configure": "^0.5.0",
-    "codeceptjs": "^2.5.0",
+    "codeceptjs": "^3.0.0",
     "cors": "2.8.5",
     "express": "4.17.1",
     "firebase-admin": "8.7.0",
@@ -34,7 +34,7 @@
     "@wdio/selenium-standalone-service": "^5.16.10",
     "cross-env": "6.0.3",
     "firebase-functions-test": "0.1.7",
-    "mocha": "6.2.2",
+    "mocha": "10.2.0",
     "node-mocks-http": "1.8.0",
     "nodemon": "1.19.4"
   }
